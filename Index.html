@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nombre de la Marca | Soluciones Web para Emprendimientos</title>
+  <meta name="description" content="Diseño y desarrollo de páginas web y tiendas online para emprendimientos y negocios. Soluciones profesionales, cálidas y personalizadas." />
+  <style>
+    :root { --bg:#fffafc; --card:#ffffff; --text:#2f2a32; --muted:#6f6573; --primary:#c96fa8; --primary-dark:#a94f87; --secondary:#e9c8dc; --line:#eadfea; --shadow:0 12px 30px rgba(169,79,135,.12); --radius:18px; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:Arial, Helvetica, sans-serif; background:linear-gradient(180deg,#fff7fb 0%,#fff 100%); color:var(--text); line-height:1.6; }
+    a { color:inherit; text-decoration:none; }
+    .container { width:min(1100px,92%); margin:0 auto; }
+    header { position:sticky; top:0; z-index:1000; background:rgba(255,250,252,.92); backdrop-filter:blur(10px); border-bottom:1px solid rgba(234,223,234,.8); }
+    .nav { display:flex; justify-content:space-between; align-items:center; padding:18px 0; gap:20px; flex-wrap:wrap; }
+    .logo { font-size:1.3rem; font-weight:bold; color:var(--primary-dark); letter-spacing:.3px; }
+    .menu { display:flex; gap:18px; flex-wrap:wrap; }
+    .menu a { color:var(--muted); font-weight:600; }
+    .menu a:hover { color:var(--primary-dark); }
+    .hero { padding:80px 0 60px; }
+    .hero-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:30px; align-items:center; }
+    .hero h1 { font-size:clamp(2.2rem,5vw,4rem); line-height:1.1; margin-bottom:18px; color:#241f27; }
+    .hero p { font-size:1.08rem; color:var(--muted); margin-bottom:28px; max-width:650px; }
+    .buttons { display:flex; gap:14px; flex-wrap:wrap; }
+    .btn { display:inline-block; padding:14px 22px; border-radius:999px; font-weight:700; transition:.3s ease; border:none; cursor:pointer; }
+    .btn-primary { background:var(--primary); color:#fff; box-shadow:var(--shadow); }
+    .btn-primary:hover { background:var(--primary-dark); }
+    .btn-secondary { border:2px solid var(--secondary); color:var(--primary-dark); background:#fff; }
+    .btn-secondary:hover { border-color:var(--primary); }
+    .hero-card { background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:28px; }
+    .hero-card h2 { margin-bottom:14px; color:var(--primary-dark); font-size:1.2rem; }
+    .hero-card ul { list-style:none; color:var(--muted); }
+    .hero-card li { padding:10px 0; border-bottom:1px solid #f1e7ef; }
+    .section { padding:68px 0; }
+    .section h2 { font-size:2rem; margin-bottom:12px; color:#241f27; }
+    .section p.section-intro { color:var(--muted); max-width:760px; margin-bottom:30px; }
+    .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:24px; }
+    .card h3 { color:var(--primary-dark); margin-bottom:10px; font-size:1.15rem; }
+    .card p { color:var(--muted); }
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start; }
+    .values { display:grid; gap:14px; margin-top:18px; }
+    .value { background:#fff8fc; border:1px solid var(--line); border-radius:14px; padding:16px; color:var(--muted); }
+    .portfolio-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .project { min-height:180px; border-radius:var(--radius); background:linear-gradient(135deg,#f9d7e9 0%,#fdf6fa 100%); border:1px solid var(--line); padding:22px; display:flex; flex-direction:column; justify-content:end; }
+    .project span { font-size:.9rem; color:var(--primary-dark); font-weight:700; margin-bottom:6px; }
+    .project strong { font-size:1.1rem; margin-bottom:8px; }
+    .testimonials { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .quote { font-style:italic; color:var(--muted); margin-bottom:14px; }
+    .contact-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:24px; }
+    form { display:grid; gap:14px; }
+    label { display:block; font-weight:700; margin-bottom:6px; color:#3a3340; }
+    input, textarea, select { width:100%; padding:13px 14px; border:1px solid #d9c9d7; border-radius:12px; font:inherit; background:#fff; color:var(--text); }
+    textarea { min-height:140px; resize:vertical; }
+    small { color:var(--muted); display:block; margin-top:-6px; }
+    footer { padding:24px 0 36px; border-top:1px solid var(--line); color:var(--muted); text-align:center; }
+    .highlight { color:var(--primary-dark); font-weight:700; }
+    @media (max-width:900px){ .hero-grid,.about-grid,.contact-grid,.grid-3,.portfolio-grid,.testimonials { grid-template-columns:1fr; } }
+    @media (max-width:600px){ .menu { gap:12px; } .hero { padding-top:50px; } .section { padding:52px 0; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">Nombre de la Marca</div>
+      <nav class="menu" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotras">Nosotras</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <h1>Diseñamos páginas web y tiendas online que hacen crecer tu emprendimiento</h1>
+          <p>Somos dos estudiantes de Licenciatura en Informática y creamos soluciones digitales pensadas para negocios, emprendimientos y marcas que quieren verse profesionales desde el primer clic. Trabajamos con compromiso, cercanía y atención al detalle.</p>
+          <div class="buttons">
+            <a class="btn btn-primary" href="#contacto">Solicitar presupuesto</a>
+            <a class="btn btn-secondary" href="#servicios">Ver servicios</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <h2>Lo que ofrecemos</h2>
+          <ul>
+            <li>Webs institucionales para negocios y profesionales.</li>
+            <li>Tiendas online para vender productos y servicios.</li>
+            <li>Diseño moderno, responsivo y claro.</li>
+            <li>Acompañamiento personalizado en cada etapa.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="container">
+        <h2>Servicios</h2>
+        <p class="section-intro">Pensamos cada proyecto para que combine estética, funcionalidad y confianza. La idea es que tu web no solo se vea linda, sino que también ayude a vender y comunicar mejor.</p>
+        <div class="grid-3">
+          <article class="card"><h3>Páginas web institucionales</h3><p>Ideal para emprendimientos, profesionales, marcas personales y negocios que necesitan presencia online clara y moderna.</p></article>
+          <article class="card"><h3>Tiendas online</h3><p>Catálogo, carrito, medios de pago y diseño enfocado en conversiones para vender productos o servicios en internet.</p></article>
+          <article class="card"><h3>Mantenimiento y mejoras</h3><p>Actualizaciones, cambios de diseño, optimización y soporte para que tu sitio siga funcionando bien con el tiempo.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="nosotras">
+      <div class="container about-grid">
+        <div class="card">
+          <h2>Sobre nosotras</h2>
+          <p class="section-intro">Somos una dupla joven, responsable y dedicada, con formación en informática y muchas ganas de ayudar a otros emprendimientos a dar el salto digital. Nos gusta trabajar con cuidado, escuchar necesidades reales y construir soluciones simples pero efectivas.</p>
+        </div>
+        <div class="card">
+          <h3>Nuestros valores</h3>
+          <div class="values">
+            <div class="value"><span class="highlight">Responsabilidad:</span> cumplimos con los tiempos y cuidamos cada detalle del proyecto.</div>
+            <div class="value"><span class="highlight">Seriedad:</span> trabajamos con compromiso, orden y comunicación clara.</div>
+            <div class="value"><span class="highlight">Cuidado:</span> buscamos entender a cada cliente para ofrecer una solución hecha a medida.</div>
+            <div class="value"><span class="highlight">Cercanía:</span> acompañamos el proceso de principio a fin con trato humano y amable.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proyectos">
+      <div class="container">
+        <h2>Proyectos</h2>
+        <p class="section-intro">Acá pueden mostrar trabajos reales, prototipos o diseños de práctica. Incluso si todavía no tienen clientes, este espacio sirve para demostrar estilo, capacidad y visión profesional.</p>
+        <div class="portfolio-grid">
+          <article class="project"><span>Proyecto 01</span><strong>Tienda para emprendimiento de indumentaria</strong><p>Catálogo online, diseño suave y navegación simple.</p></article>
+          <article class="project"><span>Proyecto 02</span><strong>Sitio para estudio profesional</strong><p>Web institucional con presentación de servicios y contacto rápido.</p></article>
+          <article class="project"><span>Proyecto 03</span><strong>Landing page para marca local</strong><p>Una página enfocada en captar consultas y generar confianza.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="testimonios">
+      <div class="container">
+        <h2>Testimonios</h2>
+        <p class="section-intro">Si todavía no tienen clientes, pueden usar esta sección más adelante. Por ahora también puede servir como espacio para opiniones de profesores, compañeras o personas que hayan visto su trabajo.</p>
+        <div class="testimonials">
+          <article class="card"><p class="quote">“Una propuesta clara, cálida y muy profesional. Se nota la dedicación en cada detalle.”</p><p><strong>Cliente / referencia</strong></p></article>
+          <article class="card"><p class="quote">“Escucharon lo que necesitábamos y lo transformaron en una web ordenada y linda.”</p><p><strong>Cliente / referencia</strong></p></article>
+          <article class="card"><p class="quote">“Muy responsables, con buena comunicación y un trato excelente durante todo el proceso.”</p><p><strong>Cliente / referencia</strong></p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="container contact-grid">
+        <div class="card">
+          <h2>Contacto</h2>
+          <p class="section-intro">Contanos qué necesitás y te respondemos con una propuesta pensada para tu negocio. Podés escribirnos por formulario, WhatsApp o Instagram.</p>
+          <p><strong>Email:</strong> hola@tumarca.com</p>
+          <p><strong>WhatsApp:</strong> +54 11 0000-0000</p>
+          <p><strong>Instagram:</strong> @tumarca</p>
+        </div>
+        <div class="card">
+          <form id="contact-form">
+            <div><label for="nombre">Nombre y apellido</label><input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" /></div>
+            <div><label for="correo">Correo electrónico</label><input type="email" id="correo" name="correo" placeholder="tunombre@email.com" /></div>
+            <div><label for="servicio">Servicio de interés</label><select id="servicio" name="servicio"><option value="">Elegí una opción</option><option value="web">Página web institucional</option><option value="tienda">Tienda online</option><option value="mantenimiento">Mantenimiento web</option><option value="otro">Otro</option></select></div>
+            <div><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" placeholder="Contanos sobre tu emprendimiento, idea o proyecto."></textarea><small>Cuanta más información nos compartas, mejor podremos ayudarte.</small></div>
+            <button class="btn btn-primary" type="submit">Enviar consulta</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Nombre de la Marca. Soluciones web con compromiso, cuidado y profesionalismo.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('contact-form');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const nombre = document.getElementById('nombre').value.trim();
+        const correo = document.getElementById('correo').value.trim();
+        const mensaje = document.getElementById('mensaje').value.trim();
+        if (!nombre || !correo || !mensaje) {
+          alert('Por favor, completá los campos obligatorios (nombre, correo y mensaje).');
+          return;
+        }
+        form.innerHTML = `<div style="text-align:center; padding: 20px;"><h3 style="color: var(--primary-dark); margin-bottom: 10px;">¡Gracias por tu mensaje!</h3><p style="color: var(--muted);">Te respondemos lo antes posible a ${correo} con una propuesta para tu proyecto.</p></div>`;
+      });
+    });
+  </script>
+</body>
+</html>
